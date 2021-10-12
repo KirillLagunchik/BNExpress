@@ -12,5 +12,6 @@
 </head>
 <body>
     <h1>Аутентификация</h1>
+    <span>${email}</span>
 </body>
 </html>

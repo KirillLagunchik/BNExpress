@@ -5,6 +5,7 @@
   Time: 14:40
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
@@ -12,7 +13,7 @@
 </head>
 <body>
     <h3>Регистрация: </h3>
-    <form:form method="POST" action="/postEmailLogin" modelAttribute="email">
+    <form:form method="POST" action="/BNExpress_war/postEmailLogin" modelAttribute="email">
         <table>
             <tr>
                 <td><form:label path="email">Email</form:label></td>
