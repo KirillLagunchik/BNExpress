@@ -5,13 +5,23 @@
   Time: 14:40
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
-    <title>Аунтентификация</title>
+    <title>Регистрация</title>
 </head>
 <body>
-    <h1>Аутентификация: </h1>
-    
+    <h3>Регистрация: </h3>
+    <form:form method="POST" action="/postEmailLogin" modelAttribute="email">
+        <table>
+            <tr>
+                <td><form:label path="email">Email</form:label></td>
+                <td><form:input path="email"/></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Подтвердить"></td>
+            </tr>
+        </table>
+    </form:form>
 </body>
 </html>
