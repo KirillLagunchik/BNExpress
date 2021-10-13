@@ -27,10 +27,6 @@
     <url-pattern>/email-login</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>EmailLogin</servlet-name>
-    <url-pattern>/postEmailLogin</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
     <servlet-name>AuthEmail</servlet-name>
     <url-pattern>/auth-email</url-pattern>
   </servlet-mapping>

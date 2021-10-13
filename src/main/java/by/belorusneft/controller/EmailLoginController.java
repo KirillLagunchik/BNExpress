@@ -1,6 +1,8 @@
 package by.belorusneft.controller;
 
 import by.belorusneft.entity.EmailLoginRequest;
+import by.belorusneft.entity.EmailLoginResponse;
+import by.belorusneft.servlet.EmailLoginService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -16,17 +18,19 @@ public class EmailLoginController {
 
     @RequestMapping(value = "/email-login", method = RequestMethod.GET)
     public String showEmailLoginPage(Model model) {
-        model.addAttribute("email", new EmailLoginRequest());
+        model.addAttribute("partnerEmailAddress", new EmailLoginRequest());
         return "emailLogin";
     }
 
-    @RequestMapping(value = "/postEmailLogin", method = RequestMethod.POST)
-    public String submit(@Valid @ModelAttribute("email") EmailLoginRequest email, BindingResult result,
+    @RequestMapping(value = "/email-login", method = RequestMethod.POST)
+    public String submit(@Valid @ModelAttribute("partnerEmailAddress") EmailLoginRequest emailLoginRequest,
+                         BindingResult result,
                          ModelMap model) {
         if (result.hasErrors()) {
             return "errorPage";
         }
-        model.addAttribute("email", email);
+        model.addAttribute("emailLoginRequest", emailLoginRequest);
+        //EmailLoginResponse response = EmailLoginService.emailLoginHttpRequest(emailLoginRequest.getPartnerEmailAddress());
         return "authEmail";
     }
 }

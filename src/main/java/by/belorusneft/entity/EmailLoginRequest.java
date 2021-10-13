@@ -2,13 +2,13 @@ package by.belorusneft.entity;
 
 public class EmailLoginRequest {
 
-    private String email;
+    private String partnerEmailAddress;
 
-    public String getEmail() {
-        return email;
+    public String getPartnerEmailAddress() {
+        return partnerEmailAddress;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPartnerEmailAddress(String partnerEmailAddress) {
+        this.partnerEmailAddress = partnerEmailAddress;
     }
 }

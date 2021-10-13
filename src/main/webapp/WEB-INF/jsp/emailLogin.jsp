@@ -7,17 +7,17 @@
 --%>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<html>
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
     <title>Регистрация</title>
 </head>
 <body>
     <h3>Регистрация: </h3>
-    <form:form method="POST" action="/BNExpress_war/postEmailLogin" modelAttribute="email">
+    <form:form method="POST" action="/BNExpress_war/email-login" modelAttribute="partnerEmailAddress">
         <table>
             <tr>
-                <td><form:label path="email">Email</form:label></td>
-                <td><form:input path="email"/></td>
+                <td><form:label path="partnerEmailAddress">Email</form:label></td>
+                <td><form:input path="partnerEmailAddress"/></td>
             </tr>
             <tr>
                 <td><input type="submit" value="Подтвердить"></td>
