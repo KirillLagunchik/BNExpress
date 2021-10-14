@@ -12,6 +12,6 @@
 </head>
 <body>
     <h1>Аутентификация</h1>
-    <p ${partnerEmailAddress}/>
+    <p ${emailLoginRequest.partnerEmailAddress}/>
 </body>
 </html>

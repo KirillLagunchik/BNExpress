@@ -18,12 +18,12 @@ public class EmailLoginController {
 
     @RequestMapping(value = "/email-login", method = RequestMethod.GET)
     public String showEmailLoginPage(Model model) {
-        model.addAttribute("partnerEmailAddress", new EmailLoginRequest());
+        model.addAttribute("emailLoginRequest", new EmailLoginRequest());
         return "emailLogin";
     }
 
     @RequestMapping(value = "/email-login", method = RequestMethod.POST)
-    public String submit(@Valid @ModelAttribute("partnerEmailAddress") EmailLoginRequest emailLoginRequest,
+    public String submit(@Valid @ModelAttribute("emailLoginRequest") EmailLoginRequest emailLoginRequest,
                          BindingResult result,
                          ModelMap model) {
         if (result.hasErrors()) {

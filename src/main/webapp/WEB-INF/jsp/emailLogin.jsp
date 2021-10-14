@@ -13,7 +13,7 @@
 </head>
 <body>
     <h3>Регистрация: </h3>
-    <form:form method="POST" action="/BNExpress_war/email-login" modelAttribute="partnerEmailAddress">
+    <form:form method="POST" action="/BNExpress_war/email-login" modelAttribute="emailLoginRequest">
         <table>
             <tr>
                 <td><form:label path="partnerEmailAddress">Email</form:label></td>
