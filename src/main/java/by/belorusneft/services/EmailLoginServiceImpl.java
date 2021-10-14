@@ -1,15 +1,15 @@
-package by.belorusneft.servlet;
+package by.belorusneft.services;
 
 import by.belorusneft.entity.EmailLoginRequest;
 import by.belorusneft.entity.EmailLoginResponse;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
-public class EmailLoginService {
+public class EmailLoginServiceImpl implements EmailLoginService {
 
     static final String url = "http://rl-erc-test.it.beloil.by:8027/rcp2/billing/api/public/Login/Email";
 
-    public static EmailLoginResponse emailLoginHttpRequest(String email) {
+    public EmailLoginResponse emailLoginHttpRequest(String email) {
         EmailLoginRequest emailLoginRequest = new EmailLoginRequest();
         emailLoginRequest.setPartnerEmailAddress(email);
         RestTemplate restTemplate = new RestTemplate();

@@ -1,8 +1,6 @@
 package by.belorusneft.controller;
 
 import by.belorusneft.entity.EmailLoginRequest;
-import by.belorusneft.entity.EmailLoginResponse;
-import by.belorusneft.servlet.EmailLoginService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
